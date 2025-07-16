@@ -1,0 +1,187 @@
+
+        :root {
+            --pink-light: #ff8e8e;
+            --pink-dark: #ff6b6b;
+            --pink-soft: #ffd8d8;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #ffeef8 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #333;
+        }
+        
+        .birthday-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .birthday-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .header {
+            background: linear-gradient(45deg, var(--pink-dark), var(--pink-light));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .heart {
+            color: var(--pink-dark);
+            animation: pulse 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .photo-frame {
+            border: 10px solid white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 300px;
+            overflow: hidden;
+            transform: rotate(-3deg);
+            transition: transform 0.3s;
+        }
+        
+        .photo-frame:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .photo-frame:hover img {
+            transform: scale(1.1);
+        }
+        
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            text-align: right;
+            margin-top: 30px;
+            color: var(--pink-dark);
+        }
+        
+        .btn-love {
+            background: linear-gradient(45deg, var(--pink-dark), var(--pink-light));
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+        }
+        
+        .btn-love:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(255, 107, 107, 0.4);
+        }
+        
+        /* Animasi floating hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart-shape {
+            position: absolute;
+            color: rgba(255, 107, 107, 0.6);
+            font-size: 20px;
+            animation: float-up 6s linear infinite;
+            opacity: 0;
+        }
+        
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Music player */
+        .music-player {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 25px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--pink-soft);
+        }
+        
+        .music-title {
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--pink-dark);
+            font-size: 1.2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    
